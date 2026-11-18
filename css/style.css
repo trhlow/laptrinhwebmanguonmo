@@ -1,0 +1,192 @@
+/* css/style.css - Giao diện bài tập PHP căn bản */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 20px 0;
+    background: #999;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+}
+
+.khung {
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #4a7d1e;
+    background: #8fd94f;
+}
+
+/* Banner */
+.banner img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+/* Thanh điều hướng */
+.thanh-dieu-huong {
+    position: relative;
+    padding: 4px 6px;
+    border-top: 1px solid #4a7d1e;
+    border-bottom: 1px solid #4a7d1e;
+    text-align: center;
+}
+.thanh-dieu-huong a {
+    position: absolute;
+    left: 6px;
+    color: #000;
+    text-decoration: none;
+}
+.thanh-dieu-huong a:hover { text-decoration: underline; }
+.khau-hieu { color: #ff3300; }
+
+/* 3 cột */
+.noi-dung-chinh {
+    display: flex;
+    min-height: 420px;
+}
+.cot-trai {
+    width: 200px;
+    border-right: 1px solid #4a7d1e;
+}
+.cot-giua {
+    flex: 1;
+    background: #fff;
+    padding: 10px 16px 20px;
+}
+.cot-phai {
+    width: 200px;
+    border-left: 1px solid #4a7d1e;
+}
+
+.tieu-de-menu {
+    color: #ff6600;
+    text-align: center;
+    font-weight: bold;
+    padding: 4px;
+    border-bottom: 1px solid #4a7d1e;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li a {
+    display: block;
+    padding: 4px 6px;
+    border-bottom: 1px solid #4a7d1e;
+    color: #000;
+    text-decoration: none;
+}
+.menu li a:hover,
+.menu li a.dang-chon {
+    background: #5fae1f;
+    color: #fff;
+}
+
+/* Form đăng nhập */
+.form-dang-nhap { padding: 8px; }
+.form-dang-nhap label {
+    display: block;
+    margin-bottom: 6px;
+}
+.form-dang-nhap input[type=text],
+.form-dang-nhap input[type=password] {
+    width: 100%;
+}
+.nhom-nut { margin-top: 6px; }
+
+/* Chân trang */
+.chan-trang {
+    border-top: 1px solid #4a7d1e;
+    text-align: center;
+    padding: 6px;
+}
+
+/* ===== Nội dung bài tập ===== */
+h1.ten-bai {
+    color: #0033cc;
+    text-align: center;
+    font-size: 26px;
+    margin: 6px 0 14px;
+}
+
+table.bang-form {
+    width: 100%;
+    border-collapse: collapse;
+    background: #d6d6d6;
+}
+table.bang-form td {
+    border: 1px solid #3333cc;
+    padding: 6px 8px;
+}
+table.bang-form td.nhan { width: 140px; }
+table.bang-form fieldset { border: 1px solid #aaa; }
+
+.ket-qua {
+    font-weight: bold;
+    color: #c00;
+}
+.thanh-cong { color: #006600; font-weight: bold; }
+.loi { color: #c00; }
+
+.khung-ket-qua {
+    margin-top: 14px;
+    padding: 10px 12px;
+    background: #cc99ff;
+    border: 1px solid #9966cc;
+}
+
+/* Bảng cửu chương */
+.luoi-cuu-chuong {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+table.cuu-chuong {
+    border-collapse: collapse;
+    width: 100%;
+}
+table.cuu-chuong th {
+    background: #5fae1f;
+    color: #fff;
+    padding: 4px;
+}
+table.cuu-chuong td {
+    border: 1px solid #ccc;
+    padding: 2px 8px;
+    text-align: center;
+}
+table.cuu-chuong tr:nth-child(even) td { background: #f1fbe8; }
+
+/* ===== Phần 2: PHP-MySQL ===== */
+.thanh-tai-khoan {
+    margin: 0 0 8px;
+    padding: 4px 8px;
+    background: #ccc;
+    text-align: right;
+}
+.anh-dai-dien { max-width: 150px; max-height: 150px; }
+
+table.bang-du-lieu {
+    width: 100%;
+    border-collapse: collapse;
+}
+table.bang-du-lieu th {
+    background: #5fae1f;
+    color: #fff;
+    padding: 4px;
+}
+table.bang-du-lieu td {
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    text-align: center;
+}
+table.bang-du-lieu form { margin: 0; }
+
+.nhom-hinh { margin: 8px 0; }
+.nhom-hinh label { margin-right: 16px; }
+.o-nhap-hinh { margin: 6px 0 6px 22px; }
+.o-nhap-hinh input[type=text] { width: 80px; }
