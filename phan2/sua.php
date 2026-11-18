@@ -1,7 +1,7 @@
 <?php
 // sua.php - Bài 12: hiển thị thông tin cũ của người dùng cần sửa
 require_once __DIR__ . '/../includes/functions.php';
-batBuocDangNhap('nguoiquantri', 'dangnhapQT.php');
+batBuocDangNhap('nguoiquantri');
 require __DIR__ . '/ketnoi.php';
 
 $row = $kn->execute_query('SELECT * FROM nguoi_dung WHERE username = ?', [$_GET['user'] ?? ''])->fetch_assoc();
@@ -12,7 +12,7 @@ if (!$row) {
 $tieuDe = 'Sửa người dùng';
 require __DIR__ . '/../includes/header.php';
 ?>
-<p class="thanh-tai-khoan">Xin chào <b><?= h($_SESSION['nguoiquantri']) ?></b> | <a href="quantri.php">Quay lại</a> | <a href="thoatQT.php">Thoát</a></p>
+<p class="thanh-tai-khoan">Xin chào <b><?= h($_SESSION['nguoiquantri']) ?></b> | <a href="quantri.php">Quay lại</a> | <a href="thoat.php">Thoát</a></p>
 <h1 class="ten-bai">Sửa thông tin người dùng</h1>
 
 <form name="frmsua" action="thuchien_sua.php" method="post" enctype="multipart/form-data">

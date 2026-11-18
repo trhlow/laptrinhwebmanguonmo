@@ -1,7 +1,7 @@
 <?php
 // trangtt_canhan.php - Bài 5: hiển thị thông tin cá nhân của người đang đăng nhập
 require_once __DIR__ . '/../includes/functions.php';
-batBuocDangNhap('nguoidung', 'dangnhap.php');
+batBuocDangNhap('nguoidung');
 require __DIR__ . '/ketnoi.php';
 
 $row = $kn->execute_query('SELECT * FROM nguoi_dung WHERE username = ?', [$_SESSION['nguoidung']])->fetch_assoc();

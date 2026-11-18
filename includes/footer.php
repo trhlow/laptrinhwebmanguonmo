@@ -3,7 +3,12 @@
         <!-- Khung đăng nhập bên phải -->
         <div class="cot-phai">
             <div class="tieu-de-menu">Đăng nhập</div>
-            <?php if (isset($_SESSION['nguoidung'])): ?>
+            <?php if (isset($_SESSION['nguoiquantri'])): ?>
+                <div class="form-dang-nhap">
+                    Xin chào <b><?= h($_SESSION['nguoiquantri']) ?></b> (quản trị)<br>
+                    <a href="<?= $goc ?>phan2/quantri.php">Quản trị</a> | <a href="<?= $goc ?>phan2/thoat.php">Thoát</a>
+                </div>
+            <?php elseif (isset($_SESSION['nguoidung'])): ?>
                 <div class="form-dang-nhap">
                     Xin chào <b><?= h($_SESSION['nguoidung']) ?></b><br>
                     <a href="<?= $goc ?>phan2/trangtt_canhan.php">Thông tin cá nhân</a> | <a href="<?= $goc ?>phan2/thoat.php">Thoát</a>

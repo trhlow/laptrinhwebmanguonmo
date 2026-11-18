@@ -1,7 +1,7 @@
 <?php
 // quantri.php - Bài 11: danh sách người dùng, quản trị có quyền sửa / xóa
 require_once __DIR__ . '/../includes/functions.php';
-batBuocDangNhap('nguoiquantri', 'dangnhapQT.php');
+batBuocDangNhap('nguoiquantri');
 require __DIR__ . '/ketnoi.php';
 
 $kq = $kn->query('SELECT username, hoten, gioitinh, quocgia, hinhdaidien FROM nguoi_dung ORDER BY username');
@@ -9,7 +9,7 @@ $kq = $kn->query('SELECT username, hoten, gioitinh, quocgia, hinhdaidien FROM ng
 $tieuDe = 'Quản trị người dùng';
 require __DIR__ . '/../includes/header.php';
 ?>
-<p class="thanh-tai-khoan">Xin chào <b><?= h($_SESSION['nguoiquantri']) ?></b> | <a href="thoatQT.php">Thoát</a></p>
+<p class="thanh-tai-khoan">Xin chào <b><?= h($_SESSION['nguoiquantri']) ?></b> | <a href="thoat.php">Thoát</a></p>
 <h1 class="ten-bai">Thông tin người dùng</h1>
 
 <?php if ($kq->num_rows === 0): ?>

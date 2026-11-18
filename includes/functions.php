@@ -19,11 +19,12 @@ function thongBao($loiNhan, $url)
     exit;
 }
 
-// Chặn người chưa đăng nhập: $khoa là 'nguoidung' hoặc 'nguoiquantri'
-function batBuocDangNhap($khoa, $trangDangNhap)
+// Chặn người chưa đăng nhập: $khoa là 'nguoidung' hoặc 'nguoiquantri'.
+// Đưa về trang chủ để đăng nhập ở khung bên phải (các trang gọi hàm này đều nằm trong phan2/)
+function batBuocDangNhap($khoa)
 {
     if (!isset($_SESSION[$khoa])) {
-        thongBao('Bạn không có quyền trên trang này!', $trangDangNhap);
+        thongBao('Bạn không có quyền trên trang này! Hãy đăng nhập ở khung bên phải.', '../index.php');
     }
 }
 

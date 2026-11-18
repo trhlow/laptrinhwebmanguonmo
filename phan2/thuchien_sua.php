@@ -1,7 +1,7 @@
 <?php
 // thuchien_sua.php - Bài 13: thực hiện lệnh sửa thông tin người dùng
 require_once __DIR__ . '/../includes/functions.php';
-batBuocDangNhap('nguoiquantri', 'dangnhapQT.php');
+batBuocDangNhap('nguoiquantri');
 require __DIR__ . '/ketnoi.php';
 
 $tdn = layPost('tendn');

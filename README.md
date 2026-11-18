@@ -18,10 +18,10 @@ phanPHP/
 └── phan2/
     ├── online_shop.sql  ← tạo CSDL online_shop (bảng nguoi_dung, admin, loai_sach, sach) và dữ liệu mẫu
     ├── ketnoi.php       ← kết nối CSDL
-    ├── dangky.php, xlydangky.php, trangtt_canhan.php, thoat.php
-    ├── dangnhap.php, xuly_dangnhap.php
-    ├── dangnhapQT.php, xuly_dangnhapQT.php, quantri.php
-    ├── sua.php, thuchien_sua.php, xoa.php, thoatQT.php
+    ├── dangky.php, xlydangky.php, trangtt_canhan.php
+    ├── xuly_dangnhap.php ← xử lý khung đăng nhập bên phải (chung cho quản trị và người dùng)
+    ├── thoat.php        ← đăng xuất (chung cho quản trị và người dùng)
+    ├── quantri.php, sua.php, thuchien_sua.php, xoa.php
     └── HINHANH/         ← ảnh đại diện người dùng upload
 ```
 
@@ -53,7 +53,9 @@ Vào http://localhost/phpmyadmin → tab **Import** → chọn `phanPHP/phan2/on
 http://localhost/duanweb/phanPHP/
 
 - Phần 1 chạy được ngay, không cần CSDL.
-- Phần 2: đăng ký thành viên ở menu trái. Trang quản trị đăng nhập bằng **admin / admin123**.
+- Phần 2: đăng ký thành viên ở menu trái. Quản trị và người dùng đăng nhập chung ở **khung bên phải**:
+  - Quản trị: **admin / admin123** hoặc **quantri / 123456**, đăng nhập xong vào trang Quản trị.
+  - Người dùng mẫu: **nguyenvana / 123456** hoặc **tranthib / 123456**, đăng nhập xong vào trang Thông tin cá nhân.
 
 ## Những điểm đã chỉnh sửa so với code mẫu Phần 2
 
