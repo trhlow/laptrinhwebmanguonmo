@@ -38,6 +38,7 @@ CREATE TABLE sach (
     mota     TEXT,
     sotrang  INT,
     dongia   INT,
+    soluong  INT          DEFAULT 0,   -- số lượng sách còn trong kho
     hinhsach TEXT,
     maloai   VARCHAR(5)   NOT NULL,
     PRIMARY KEY (idsach),
@@ -72,14 +73,14 @@ INSERT INTO loai_sach (maloai, tenloai) VALUES
 ('ML005', 'Phát triển bản thân');
 
 -- 10 cuốn sách, hình lấy từ thư mục hinhanh của dự án
-INSERT INTO sach (tensach, tacgia, mota, sotrang, dongia, hinhsach, maloai) VALUES
-('Một vòng quanh châu Á', 'Nhiều tác giả', 'Giới thiệu các điểm đến nổi tiếng, văn hóa và ẩm thực của các nước châu Á.', 220, 65000, 'hinhanh/136452.jpg', 'ML001'),
-('Du lịch thế giới - Châu Á', 'Nhiều tác giả', 'Cẩm nang du lịch các quốc gia châu Á: danh lam thắng cảnh, lễ hội, kinh nghiệm đi lại.', 180, 55000, 'hinhanh/139075.jpg', 'ML001'),
-('Du lịch thế giới - Châu Âu', 'Nhiều tác giả', 'Cẩm nang du lịch các nước châu Âu với những công trình kiến trúc và thành phố nổi tiếng.', 196, 58000, 'hinhanh/139076.jpg', 'ML001'),
-('Các phương pháp thi công xây dựng', 'Ngô Văn Quỳ', 'Trình bày các phương pháp và kỹ thuật thi công công trình xây dựng dân dụng và công nghiệp.', 350, 95000, 'hinhanh/143801.jpg', 'ML002'),
-('Các mẹo hay khi sử dụng máy tính', 'Phạm Quang Huy', 'Tổng hợp các thủ thuật giúp sử dụng máy tính và phần mềm văn phòng hiệu quả hơn.', 240, 48000, 'hinhanh/144337.jpg', 'ML003'),
-('Tin học văn phòng - Windows XP', 'Phạm Quang Huy', 'Hướng dẫn sử dụng hệ điều hành Windows XP từ cơ bản đến nâng cao.', 280, 52000, 'hinhanh/144343.jpg', 'ML003'),
-('Tự học JavaScript', 'Phạm Quang Hiển', 'Tự học lập trình JavaScript qua các ví dụ thực hành cho trang web.', 320, 75000, 'hinhanh/144571.jpg', 'ML003'),
-('Kỹ thuật số - Flip-flop, thanh ghi, bộ đếm', 'Nguyễn Hữu Phương', 'Kiến thức về flip-flop, thanh ghi và bộ đếm trong mạch điện tử số.', 200, 45000, 'hinhanh/73900.jpg', 'ML003'),
-('Mộng đời bất tuyệt', 'Nguyễn Tường Bách', 'Tiểu thuyết về những ước mơ và số phận con người qua nhiều biến động của cuộc đời.', 400, 88000, 'hinhanh/144220.jpg', 'ML004'),
-('Vượt qua thử thách', 'Nhiều tác giả', 'Những câu chuyện truyền cảm hứng giúp bạn đứng dậy sau thất bại và vượt qua khó khăn.', 160, 42000, 'hinhanh/144349.jpg', 'ML005');
+INSERT INTO sach (tensach, tacgia, mota, sotrang, dongia, soluong, hinhsach, maloai) VALUES
+('Một vòng quanh châu Á', 'Nhiều tác giả', 'Giới thiệu các điểm đến nổi tiếng, văn hóa và ẩm thực của các nước châu Á.', 220, 65000, 15, 'hinhanh/136452.jpg', 'ML001'),
+('Du lịch thế giới - Châu Á', 'Nhiều tác giả', 'Cẩm nang du lịch các quốc gia châu Á: danh lam thắng cảnh, lễ hội, kinh nghiệm đi lại.', 180, 55000, 20, 'hinhanh/139075.jpg', 'ML001'),
+('Du lịch thế giới - Châu Âu', 'Nhiều tác giả', 'Cẩm nang du lịch các nước châu Âu với những công trình kiến trúc và thành phố nổi tiếng.', 196, 58000, 12, 'hinhanh/139076.jpg', 'ML001'),
+('Các phương pháp thi công xây dựng', 'Ngô Văn Quỳ', 'Trình bày các phương pháp và kỹ thuật thi công công trình xây dựng dân dụng và công nghiệp.', 350, 95000, 8, 'hinhanh/143801.jpg', 'ML002'),
+('Các mẹo hay khi sử dụng máy tính', 'Phạm Quang Huy', 'Tổng hợp các thủ thuật giúp sử dụng máy tính và phần mềm văn phòng hiệu quả hơn.', 240, 48000, 25, 'hinhanh/144337.jpg', 'ML003'),
+('Tin học văn phòng - Windows XP', 'Phạm Quang Huy', 'Hướng dẫn sử dụng hệ điều hành Windows XP từ cơ bản đến nâng cao.', 280, 52000, 10, 'hinhanh/144343.jpg', 'ML003'),
+('Tự học JavaScript', 'Phạm Quang Hiển', 'Tự học lập trình JavaScript qua các ví dụ thực hành cho trang web.', 320, 75000, 30, 'hinhanh/144571.jpg', 'ML003'),
+('Kỹ thuật số - Flip-flop, thanh ghi, bộ đếm', 'Nguyễn Hữu Phương', 'Kiến thức về flip-flop, thanh ghi và bộ đếm trong mạch điện tử số.', 200, 45000, 5, 'hinhanh/73900.jpg', 'ML003'),
+('Mộng đời bất tuyệt', 'Nguyễn Tường Bách', 'Tiểu thuyết về những ước mơ và số phận con người qua nhiều biến động của cuộc đời.', 400, 88000, 18, 'hinhanh/144220.jpg', 'ML004'),
+('Vượt qua thử thách', 'Nhiều tác giả', 'Những câu chuyện truyền cảm hứng giúp bạn đứng dậy sau thất bại và vượt qua khó khăn.', 160, 42000, 22, 'hinhanh/144349.jpg', 'ML005');
