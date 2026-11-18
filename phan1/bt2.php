@@ -25,8 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<h1 class="ten-bai">Giải phương trình bậc I</h1>
-<p>Dạng phương trình: <b>ax + b = 0</b></p>
+<h1>Giải phương trình bậc I</h1>
 
 <form method="post" action="bt2.php">
     Nhập a: <input type="text" name="a" value="<?= h($a) ?>"><br>

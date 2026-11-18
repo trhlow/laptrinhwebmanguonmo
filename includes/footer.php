@@ -10,12 +10,20 @@
                 </div>
             <?php else: ?>
                 <form class="form-dang-nhap" method="post" action="<?= $goc ?>phan2/xuly_dangnhap.php">
-                    <label>Tên đăng nhập: <input type="text" name="tendn" required></label>
-                    <label>Mật khẩu: <input type="password" name="matkhau" required></label>
-                    <div class="nhom-nut">
-                        <input type="submit" value="Đăng nhập">
-                        <input type="reset" value="Hủy bỏ">
-                    </div>
+                    <table>
+                        <tr>
+                            <td><label for="o-tendn">Tên đăng nhập:</label></td>
+                            <td><input type="text" id="o-tendn" name="tendn" size="12" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="o-matkhau">Mật khẩu:</label></td>
+                            <td><input type="password" id="o-matkhau" name="matkhau" size="12" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Đăng nhập"></td>
+                            <td><input type="reset" value="Hủy bỏ"></td>
+                        </tr>
+                    </table>
                 </form>
             <?php endif; ?>
         </div>

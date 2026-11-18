@@ -22,12 +22,11 @@ $menuPhpCanBan = [
     'phan1/bt10.php' => 'BT10 - Ngày tháng hiện tại',
 ];
 
+// Giống giao diện mẫu: chỉ 2 mục. Đăng nhập nằm ở khung bên phải,
+// "Quản trị" chưa đăng nhập sẽ tự chuyển sang trang đăng nhập quản trị
 $menuPhpMySql = [
-    'phan2/dangky.php'         => 'Đăng ký thành viên',
-    'phan2/dangnhap.php'       => 'Đăng nhập',
-    'phan2/trangtt_canhan.php' => 'Thông tin cá nhân',
-    'phan2/dangnhapQT.php'     => 'Đăng nhập quản trị',
-    'phan2/quantri.php'        => 'Quản trị người dùng',
+    'phan2/dangky.php'  => 'Đăng ký thành viên',
+    'phan2/quantri.php' => 'Quản trị',
 ];
 ?>
 <!DOCTYPE html>
@@ -42,13 +41,13 @@ $menuPhpMySql = [
 <div class="khung">
     <!-- Banner -->
     <div class="banner">
-        <img src="<?= $goc ?>hinhanh/sachhay1.jpg" alt="Banner Tri thức">
+        <img src="<?= $goc ?>hinhanh/sachhay_new1.gif" alt="Banner Tri thức">
     </div>
 
-    <!-- Thanh điều hướng -->
+    <!-- Thanh điều hướng (dòng chữ chạy giống giao diện mẫu của cô) -->
     <div class="thanh-dieu-huong">
         <a href="<?= $goc ?>index.php">Trang chủ</a>
-        <span class="khau-hieu">Cùng bạn đi tìm tri thức!</span>
+        <marquee class="khau-hieu">Cùng bạn đi tìm tri thức!</marquee>
     </div>
 
     <div class="noi-dung-chinh">

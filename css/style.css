@@ -20,25 +20,23 @@ body {
 .banner img {
     display: block;
     width: 100%;
-    height: 190px;
-    object-fit: cover;
+    height: 200px;
 }
 
 /* Thanh điều hướng */
 .thanh-dieu-huong {
-    position: relative;
+    display: flex;
     padding: 4px 6px;
     border-top: 1px solid #4a7d1e;
     border-bottom: 1px solid #4a7d1e;
-    text-align: center;
 }
 .thanh-dieu-huong a {
-    position: absolute;
-    left: 6px;
-    color: #000;
+    width: 80px;
+    color: #060;
     text-decoration: none;
 }
 .thanh-dieu-huong a:hover { text-decoration: underline; }
+.thanh-dieu-huong marquee { flex: 1; }
 .khau-hieu { color: #ff3300; }
 
 /* 3 cột */
@@ -77,26 +75,26 @@ body {
     display: block;
     padding: 4px 6px;
     border-bottom: 1px solid #4a7d1e;
-    color: #000;
+    color: #060;
     text-decoration: none;
 }
+/* Màu lấy theo css.css trong giao diện mẫu của cô */
 .menu li a:hover,
 .menu li a.dang-chon {
-    background: #5fae1f;
+    background: #f90;
     color: #fff;
+    font-weight: bold;
 }
+.menu li a:hover { text-decoration: underline; }
 
 /* Form đăng nhập */
-.form-dang-nhap { padding: 8px; }
-.form-dang-nhap label {
-    display: block;
-    margin-bottom: 6px;
-}
+.form-dang-nhap { padding: 4px 2px; }
+.form-dang-nhap table { border-collapse: collapse; }
+.form-dang-nhap td { padding: 1px 2px; white-space: nowrap; }
 .form-dang-nhap input[type=text],
 .form-dang-nhap input[type=password] {
-    width: 100%;
+    width: 90px;
 }
-.nhom-nut { margin-top: 6px; }
 
 /* Chân trang */
 .chan-trang {
