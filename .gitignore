@@ -1,3 +1,16 @@
+# XAMPP: kh?ng ??a l?n GitHub (c?i l?i b?ng file installer), ch? gi? code trong htdocs/duanweb
+/server/*
+!/server/htdocs/
+/server/htdocs/*
+!/server/htdocs/duanweb/
+/xampp-*.exe
+
+# ?? c? repo ri?ng: https://github.com/trhlow/student-management-mvc
+/server/htdocs/duanweb/student-management-mvc/
+
+# B?n tr?ng c?a hinhanh.zip
+/hinhanh (1).zip
+
 # ?nh ng??i d?ng upload khi ch?y th?, ch? gi? th? m?c r?ng
-phan2/HINHANH/*
-!phan2/HINHANH/.gitkeep
+/server/htdocs/duanweb/phanPHP/phan2/HINHANH/*
+!/server/htdocs/duanweb/phanPHP/phan2/HINHANH/.gitkeep
