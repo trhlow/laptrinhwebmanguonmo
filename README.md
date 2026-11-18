@@ -16,7 +16,7 @@ phanPHP/
 ├── de-bai/              ← đề bài Phần 1
 ├── phan1/               ← bt1.php … bt10.php
 └── phan2/
-    ├── online_shop.sql  ← tạo CSDL online_shop (bảng nguoi_dung, admin)
+    ├── online_shop.sql  ← tạo CSDL online_shop (bảng nguoi_dung, admin, loai_sach, sach) và dữ liệu mẫu
     ├── ketnoi.php       ← kết nối CSDL
     ├── dangky.php, xlydangky.php, trangtt_canhan.php, thoat.php
     ├── dangnhap.php, xuly_dangnhap.php
@@ -59,7 +59,7 @@ http://localhost/duanweb/phanPHP/
 
 - Đổi các hàm `mysql_*` (đã bị xóa từ PHP 7) sang `mysqli`.
 - Dùng prepared statement để chống SQL injection.
-- Mã hóa mật khẩu bằng `password_hash` / `password_verify`.
+- Mã hóa mật khẩu bằng hàm MD5 (theo yêu cầu của cô).
 - Kiểm tra ảnh upload: chỉ nhận ảnh JPG, PNG, GIF, WEBP tối đa 1MB, đặt tên ngẫu nhiên để không ghi đè ảnh của người khác.
 - Sửa lỗi trong code mẫu:
   - Giá trị quốc gia giữa form đăng ký và form sửa không khớp.

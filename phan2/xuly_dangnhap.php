@@ -6,8 +6,8 @@ require __DIR__ . '/ketnoi.php';
 $user = layPost('tendn');
 $pass = layPost('matkhau');
 
-$row = $kn->execute_query('SELECT password FROM nguoi_dung WHERE username = ?', [$user])->fetch_assoc();
-if ($row && password_verify($pass, $row['password'])) {
+// Mật khẩu trong CSDL đã mã hóa MD5 nên so sánh với md5 của mật khẩu nhập vào
+if ($kn->execute_query('SELECT 1 FROM nguoi_dung WHERE username = ? AND password = ?', [$user, md5($pass)])->fetch_row()) {
     session_regenerate_id(true);
     $_SESSION['nguoidung'] = $user;
     thongBao('Đăng nhập thành công', 'trangtt_canhan.php');

@@ -22,7 +22,7 @@ $kn->execute_query(
 
 // Chỉ đổi mật khẩu khi quản trị có nhập mật khẩu mới
 if ($mk !== '') {
-    $kn->execute_query('UPDATE nguoi_dung SET password = ? WHERE username = ?', [password_hash($mk, PASSWORD_DEFAULT), $tdn]);
+    $kn->execute_query('UPDATE nguoi_dung SET password = ? WHERE username = ?', [md5($mk), $tdn]);
 }
 
 // Chỉ đổi ảnh khi có chọn ảnh mới; không chọn thì giữ ảnh cũ trong CSDL

@@ -50,7 +50,7 @@ require __DIR__ . '/../includes/header.php';
         <tr>
             <td class="nhan">Hình đại diện:</td>
             <td>
-                <img src="<?= h($row['hinhdaidien']) ?>" alt="" height="50" width="50">
+                <?php if ($row['hinhdaidien'] !== ''): ?><img src="<?= h($row['hinhdaidien']) ?>" alt="" height="50" width="50"><?php endif; ?>
                 Ảnh mới:
                 <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
                 <input type="file" name="hinh" accept="image/*">

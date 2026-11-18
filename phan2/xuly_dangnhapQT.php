@@ -6,8 +6,8 @@ require __DIR__ . '/ketnoi.php';
 $user = layPost('tendn');
 $pass = layPost('matkhau');
 
-$row = $kn->execute_query('SELECT pass_admin FROM admin WHERE user_admin = ?', [$user])->fetch_assoc();
-if ($row && password_verify($pass, $row['pass_admin'])) {
+// Mật khẩu trong CSDL đã mã hóa MD5 nên so sánh với md5 của mật khẩu nhập vào
+if ($kn->execute_query('SELECT 1 FROM admin WHERE useradmin = ? AND passadmin = ?', [$user, md5($pass)])->fetch_row()) {
     session_regenerate_id(true);
     $_SESSION['nguoiquantri'] = $user;
     thongBao('Đăng nhập thành công', 'quantri.php');

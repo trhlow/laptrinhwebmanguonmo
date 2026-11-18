@@ -23,7 +23,7 @@ require __DIR__ . '/../includes/header.php';
     <tr><td class="nhan">Quốc tịch:</td><td><?= h($row['quocgia']) ?></td></tr>
     <tr>
         <td class="nhan">Ảnh đại diện:</td>
-        <td><img src="<?= h($row['hinhdaidien']) ?>" alt="Ảnh đại diện" class="anh-dai-dien"></td>
+        <td><?php if ($row['hinhdaidien'] !== ''): ?><img src="<?= h($row['hinhdaidien']) ?>" alt="Ảnh đại diện" class="anh-dai-dien"><?php else: ?>(chưa có)<?php endif; ?></td>
     </tr>
 </table>
 <?php require __DIR__ . '/../includes/footer.php'; ?>

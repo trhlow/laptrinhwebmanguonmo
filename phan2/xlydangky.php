@@ -24,10 +24,10 @@ if ($duongDan === null) {
     thongBao('Ảnh đại diện không hợp lệ (chỉ nhận ảnh JPG, PNG, GIF, WEBP, tối đa 1MB)!', 'dangky.php');
 }
 
-// Mật khẩu được mã hóa trước khi lưu, không lưu dạng chữ thường như đề
+// Mật khẩu được mã hóa bằng MD5 trước khi lưu (theo yêu cầu đề)
 $kn->execute_query(
     'INSERT INTO nguoi_dung (username, password, hoten, gioitinh, quocgia, hinhdaidien) VALUES (?, ?, ?, ?, ?, ?)',
-    [$tdn, password_hash($mk, PASSWORD_DEFAULT), $ht, $gt, $qg, $duongDan]
+    [$tdn, md5($mk), $ht, $gt, $qg, $duongDan]
 );
 
 session_regenerate_id(true);

@@ -32,7 +32,7 @@ require __DIR__ . '/../includes/header.php';
                 <td><?= h($row['hoten']) ?></td>
                 <td><?= $row['gioitinh'] == 0 ? 'Nam' : 'Nữ' ?></td>
                 <td><?= h($row['quocgia']) ?></td>
-                <td><img src="<?= h($row['hinhdaidien']) ?>" alt="" height="50" width="50"></td>
+                <td><?php if ($row['hinhdaidien'] !== ''): ?><img src="<?= h($row['hinhdaidien']) ?>" alt="" height="50" width="50"><?php endif; ?></td>
                 <td><a href="sua.php?user=<?= urlencode($row['username']) ?>">Sửa</a></td>
                 <td>
                     <!-- Xóa bằng POST (không dùng link GET) để không bị xóa nhầm qua đường link -->
