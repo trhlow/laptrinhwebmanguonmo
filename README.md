@@ -12,6 +12,7 @@ phanPHP/
 ├── index.php            ← trang chủ, liệt kê bài tập 2 phần
 ├── css/style.css
 ├── includes/            ← header, footer, functions dùng chung
+├── hinhanh/             ← ảnh banner, ảnh sách
 ├── de-bai/              ← đề bài Phần 1
 ├── phan1/               ← bt1.php … bt10.php
 └── phan2/
@@ -53,8 +54,6 @@ http://localhost/duanweb/phanPHP/
 
 - Phần 1 chạy được ngay, không cần CSDL.
 - Phần 2: đăng ký thành viên ở menu trái. Trang quản trị đăng nhập bằng **admin / admin123**.
-
-> Ảnh banner được lấy từ thư mục `duanweb/hinhanh/`, nằm cạnh `phanPHP` và không có trong repo này. Muốn hiện banner thì giải nén `hinhanh.zip` (file cô cho) vào `duanweb/`. Thiếu banner thì trang vẫn chạy bình thường.
 
 ## Những điểm đã chỉnh sửa so với code mẫu Phần 2
 

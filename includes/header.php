@@ -42,7 +42,7 @@ $menuPhpMySql = [
 <div class="khung">
     <!-- Banner -->
     <div class="banner">
-        <img src="<?= $goc ?>../hinhanh/sachhay1.jpg" alt="Banner Tri thức">
+        <img src="<?= $goc ?>hinhanh/sachhay1.jpg" alt="Banner Tri thức">
     </div>
 
     <!-- Thanh điều hướng -->
